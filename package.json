@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Backend Developer Portfolio - 문지웅",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 8000 -o",
+    "dev": "http-server . -p 8000 -c-1",
+    "build-tailwind": "tailwindcss -i ./css/input.css -o ./css/style.css"
+  },
+  "keywords": [
+    "portfolio",
+    "backend",
+    "spring boot",
+    "aws"
+  ],
+  "author": "문지웅",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

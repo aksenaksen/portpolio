@@ -1,0 +1,328 @@
+/* ================================
+   Custom CSS for Portfolio
+   ================================ */
+
+:root {
+  --color-primary: #10b981;
+  --color-secondary: #6366f1;
+  --color-dark: #0f172a;
+  --color-darker: #020617;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* ================================
+   Animations
+   ================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+  }
+}
+
+/* Animation Classes */
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* ================================
+   Scroll Animation
+   ================================ */
+
+.scroll-fadeIn {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.scroll-fadeIn:nth-child(2) { animation-delay: 0.1s; }
+.scroll-fadeIn:nth-child(3) { animation-delay: 0.2s; }
+.scroll-fadeIn:nth-child(4) { animation-delay: 0.3s; }
+.scroll-fadeIn:nth-child(5) { animation-delay: 0.4s; }
+
+/* ================================
+   Glass Morphism
+   ================================ */
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   Gradient Text
+   ================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================
+   Hover Effects
+   ================================ */
+
+.hover-glow {
+  transition: all 0.3s ease-out;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+}
+
+/* ================================
+   Button Styles
+   ================================ */
+
+.btn-primary {
+  @apply bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-8 py-3 rounded-lg font-bold transition hover:shadow-lg hover:shadow-emerald-500/50;
+}
+
+.btn-outline {
+  @apply border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400/10 px-8 py-3 rounded-lg font-bold transition;
+}
+
+/* ================================
+   Typography
+   ================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ================================
+   Scroll Progress Bar
+   ================================ */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #6366f1);
+  z-index: 999;
+  transition: width 0.1s ease;
+}
+
+/* ================================
+   Custom Scrollbar
+   ================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* ================================
+   Code Blocks
+   ================================ */
+
+code {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  color: #e2e8f0;
+  padding: 0;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Hero section adjustments */
+  #hero {
+    padding: 2rem 1rem;
+  }
+
+  /* Navigation adjustments */
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* ================================
+   Print Styles
+   ================================ */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
+
+/* ================================
+   Accessibility
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* ================================
+   Loading Animation
+   ================================ */
+
+.loading {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: loading 1.4s infinite;
+}
+
+.loading:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0%, 60%, 100% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+}

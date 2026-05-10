@@ -1,0 +1,749 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>문지웅</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="269526db-cf50-80ad-bcbe-d12707a1b1ee" class="page sans"><header><h1 class="page-title" dir="auto">문지웅</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><div id="269526db-cf50-80b3-af00-c7871fb0501b" class="column-list"><div style="display:contents" dir="auto"><div id="269526db-cf50-8048-9eb4-ec7b74d5c966" style="width:31.25%" class="column"><div style="display:contents" dir="ltr"><figure id="269526db-cf50-80fe-b858-dc66c1b7974b" class="image"><a href="%EB%AC%B8%EC%A7%80%EC%9B%85/%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AE%E1%86%BC%E1%84%82%E1%85%B5%E1%86%B7_%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%89%E1%85%AE%E1%84%8B%E1%85%AD%E1%86%BC_34_%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF.jpg"><img style="width:207.46875px" src="%EB%AC%B8%EC%A7%80%EC%9B%85/%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AE%E1%86%BC%E1%84%82%E1%85%B5%E1%86%B7_%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%89%E1%85%AE%E1%84%8B%E1%85%AD%E1%86%BC_34_%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF.jpg"/></a></figure></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-800b-9e1d-e005e202c8bb" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="269526db-cf50-805a-ac8d-d4613e9cd3e4" style="width:68.75%" class="column"><div style="display:contents" dir="auto"><h3 id="269526db-cf50-800f-bc23-e030ae22cfab" class="block-color-default">Contact</h3></div><div style="display:contents" dir="auto"><hr id="269526db-cf50-80a5-ab8f-f1dda50c8ad2"/></div><div style="display:contents" dir="auto"><p id="26c526db-cf50-806c-a4a0-e932ab8530f2" class=""><strong>🎂 </strong>2000.08.17  |  <strong>부산시 남구 대연동  <br/></strong>📧 <strong>ans109905@naver.com</strong>  |  <mark class="highlight-teal">🔗 </mark><mark class="highlight-teal"><strong><a href="https://github.com/aksenaksen">Github</a></strong></mark></p></div><div style="display:contents" dir="auto"><h3 id="269526db-cf50-806e-aa51-ecd6a042e078" class=""><mark class="highlight-default">School</mark></h3></div><div style="display:contents" dir="auto"><hr id="269526db-cf50-809f-bd26-d6a36b4397d6"/></div><div style="display:contents" dir="auto"><p id="269526db-cf50-8023-8615-ffe2e07021ca" class="">🎓 부경대학교 졸업<mark class="highlight-gray"> (2019.03 ~ 2025.02)</mark></p></div><div style="display:contents" dir="auto"><p id="269526db-cf50-80db-940c-c02cd9f73964" class="">🖥️ 컴퓨터공학과</p></div><div style="display:contents" dir="auto"><p id="269526db-cf50-8036-aafe-c4aab9a64a7a" class="">📖 4.22 학점 / 4.5 학점</p></div><div style="display:contents" dir="auto"><p id="269526db-cf50-8006-9d10-de6854437ee1" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><h2 id="26a526db-cf50-80a1-baae-f9e4f29239b9" class="">Spring Boot와 AWS 기반 아키텍처 경험을 갖춘 백엔드 개발자</h2></div><div style="display:contents" dir="auto"><hr id="26a526db-cf50-808e-8d56-cc83eb0b08cd"/></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80bf-8ea4-d1945ca3fabc" class="block-color-default bulleted-list"><li style="list-style-type:disc">문제를 단순히 해결하는 것에 그치지 않고, 이슈 원인과 재현 그리고 다양한 개선 방안들을 나열 / 비교합니다.</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-805b-ad9a-c68bc9bc0666" class="block-color-default bulleted-list"><li style="list-style-type:disc">SOLID 원칙과 디자인 패턴을 통한 코드 품질과 헥사고날과 CQRS 등의 아키텍처에 대해 고민합니다.</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80de-8357-dc76a0190540" class="block-color-default bulleted-list"><li style="list-style-type:disc">새로운 기술은 토이 프로젝트를 통해 빠르게 적용해보고, 이후 원리를 하나씩 체계적으로 습득합니다.</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8002-86e8-fd08424ff7db" class="block-color-default bulleted-list"><li style="list-style-type:disc">어떤 선택을 할 때, 왜 그렇게 해야만 하는지 항상 고민하고 팀들과 공유 및 논의하여 최종 결정합니다.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f526db-cf50-809a-97a5-d772e0f48ad5" class="bulleted-list"><li style="list-style-type:disc">대용량 데이터 처리, 인증/인가, CI/CD 구축 경험을 통해 안정적이고 확장 가능한 서비스를 구현합니다.</li></ul></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-80ba-aefc-e97d10fd65b0" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="26a526db-cf50-8094-8724-cb7d80ee8211" class="">💻 Skills And Tools</h2></div><div style="display:contents" dir="auto"><hr id="26a526db-cf50-8083-afec-c10a49faaa0b"/></div><div style="display:contents" dir="ltr"><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="26c526db-cf50-8009-a3de-c1ced6c835db"><div style="font-size:1.5em"><img class="icon" src="%EB%AC%B8%EC%A7%80%EC%9B%85/Spring.png"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="26c526db-cf50-80a0-a593-e3a345e689d3" class=""><strong>Java / Spring Boot</strong></p></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-803a-8c74-dfc61cb0b2a0" class="bulleted-list"><li style="list-style-type:disc">Spring AOP 기반으로 요청 검증과 예외처리 / 트랜잭션 / 이벤트 발행 / 캐시 적용</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80e1-b474-e59755a47655" class="bulleted-list"><li style="list-style-type:disc">Spring Security를 활용한 JWT·OAuth·Session 기반 인증 및 인가 처리 경험</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80a1-85ab-e5c9fb9128cd" class="bulleted-list"><li style="list-style-type:disc">Spring Batch 기반 청크 단위 처리로 안정적인 대용량 배치 구현 경험</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-806e-9a25-f43b7181ebad" class="bulleted-list"><li style="list-style-type:disc">Spring Event와 Visitor 패턴을 활용한 구독 이벤트 처리로 서비스 간 결합도 최소화 경험</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-8022-93c0-cd8e670af9ec" class="bulleted-list"><li style="list-style-type:disc">불필요한 로그 출력 대신 <strong>IDE 디버깅 도구</strong>를 활용하여 버그 원인 파악 및 해결</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80e3-a1da-c1194d33e7cd" class="bulleted-list"><li style="list-style-type:disc">함수형 프로그래밍 기법을 활용한 선언적 코드 스타일 적용</li></ul></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="26c526db-cf50-8066-81c1-f5e897d717a7"><div style="font-size:1.5em"><img class="icon" src="https://img.icons8.com/?size=100&amp;id=9nLaR5KFGjN0&amp;format=png&amp;color=000000"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="26c526db-cf50-8072-aaca-c5b281c8ed7e" class=""><strong>MySQL / RDBMS</strong></p></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80b4-8f68-cc873e846986" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">ACID 와 같은 RDBMS 의 특징을 이해하고 다수의 JOIN, LIKE 등을 활용한 쿼리 작성 가능</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80dd-8bca-dec935f69c9c" class="bulleted-list"><li style="list-style-type:disc">Primary/Secondary Index의 차이를 이해하고, 커버링 인덱스를 활용한 쿼리 작성 경험</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80c6-873c-f594bb0a8567" class="bulleted-list"><li style="list-style-type:disc">낙관적/비관적 락 및 트랜잭션 격리 수준 이해</li></ul></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="26c526db-cf50-8040-b418-da0efb1a5c60"><div style="font-size:1.5em"><img class="icon" src="%EB%AC%B8%EC%A7%80%EC%9B%85/redis-svgrepo-com.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="26c526db-cf50-806f-ba51-f5e95f212917" class=""><strong>Redis</strong></p></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-8058-88dd-e3fbb4cf4481" class="bulleted-list"><li style="list-style-type:disc">세션 저장소로 Redis 활용 및 캐싱을 통한 조회 성능 향상 경험</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80f0-af92-c1d791f43b19" class="bulleted-list"><li style="list-style-type:disc">Redis의 싱글 스레드 동작 원리 이해</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-8006-a1ee-fc0f2f7d0b53" class="bulleted-list"><li style="list-style-type:disc">Redis 고가용성 보장 방법(클러스터, 레플리카, 센티널)에 대한 이해</li></ul></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="26c526db-cf50-8016-92b2-ef9f8ec72746"><div style="font-size:1.5em"><img class="icon" src="%EB%AC%B8%EC%A7%80%EC%9B%85/aws-svgrepo-com.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="26c526db-cf50-8040-9ea0-eb7bec81e5a0" class=""><strong>AWS - AWS Certified Solutions Architect - Associate</strong></p></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80e5-9499-fcd53b039a0f" class="bulleted-list"><li style="list-style-type:disc">VPC 및 서브넷 구성 경험, NAT 게이트웨이 설정 및 보안 그룹/네트워크 ACL을 통한 접근 제어 이해</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-804c-b1b0-f2105ea8bac3" class="bulleted-list"><li style="list-style-type:disc">Bastion 호스트를 활용한 프라이빗 서브넷 접근 실습 경험</li></ul></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="26c526db-cf50-803c-ba2a-d8ad1cbbcf5f"><div style="font-size:1.5em"><img class="icon" src="%EB%AC%B8%EC%A7%80%EC%9B%85/docker-svgrepo-com.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="26c526db-cf50-806d-9bfd-e8508496921b" class=""><strong>Docker / Git / Github Actions</strong></p></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80fa-91cc-e92b0f031ef5" class="bulleted-list"><li style="list-style-type:disc">게스트 OS 기반 VM과 Docker Engine·파일 시스템 기반 컨테이너의 가상화 방식 차이 이해</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80ed-b339-f597ed7ffd36" class="bulleted-list"><li style="list-style-type:disc">Dockerfile 작성 및 Docker Compose를 활용한 컨테이너 환경 구성 경험</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80ef-9901-d655117235e0" class="bulleted-list"><li style="list-style-type:disc">GitHub Actions를 활용한 CI/CD 파이프라인 구축 경험</li></ul></div></div></figure></div><div style="display:contents" dir="auto"><h2 id="26a526db-cf50-8046-ab61-eb4fe47ef9b5" class="">📂 Projects 개발 프로젝트 (팀)</h2></div><div style="display:contents" dir="auto"><hr id="26a526db-cf50-8094-a7ee-ea399adb0185"/></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-80a8-a82c-fd890f198832" class=""><strong>AI 활용한 식단관리 어플리케이션 프로젝트 (5)</strong><mark class="highlight-gray"><strong> | BDIA 해커톤 (3등) | 기여도 (50/100)</strong></mark></h3></div><div style="display:contents" dir="ltr"><figure id="29b526db-cf50-80d6-8848-d68adcc95208"><div class="source">https://github.com/aksenaksen/caloriepay-back</div></figure></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-8079-9065-e8ce25e1c3fc" class="block-color-gray">2024.08 ~ 2024.10 (<strong>2개월</strong>) | AI 기술을 단지 사용해보는것에 그치지 않고 비즈니스적으로 필요에 맞춰 활용</p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80a0-b035-fe973aae1bb1" class=""><mark class="highlight-gray">🛠️ Spring Boot / Java, Spring Batch, MySQL, Redis, Docker, Git - Github</mark></blockquote></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-804c-8f39-f235b4679619" class="block-color-gray_background"><strong>Features 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80cb-a6ee-c85c23cc8a75" class="bulleted-list"><li style="list-style-type:disc"><strong>자동 식단 관리</strong>: 객체 인식을 이용하여 사용자가 먹은 음식을 자동으로 인식하고 기록</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-800b-8e5e-ff0f91eb315a" class="bulleted-list"><li style="list-style-type:disc"><strong>권장 칼로리 제공</strong>: 사용자의 신체 정보를 기반으로 하루 권장 칼로리를 제공</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8032-b255-f2f5cdb3a711" class="bulleted-list"><li style="list-style-type:disc"><strong>하루 칼로리 정산</strong>: 사용자는 식사(먹기)와 운동(적립하기)을 통해 하루 칼로리를 정산</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80dc-93a3-e96b33f627c7" class="bulleted-list"><li style="list-style-type:disc"><strong>티어 및 스코어 / 칼로리 랭킹</strong>: 사용자가 다이어트를 재미있게 할 수 있도록 티어와 스코어 기능을 제공</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80f8-bb73-ee903cc9692e" class="bulleted-list"><li style="list-style-type:disc"><strong>식단 기록 캘린더</strong>: 일별로 식단 기록을 캘린더 형식으로 제공</li></ul></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-806a-a1e1-e1e5288d44df" class="block-color-yellow_background"><strong>Architecture 시스템 구성</strong></blockquote></div><div style="display:contents" dir="ltr"><figure id="26a526db-cf50-8057-807d-ce72d748680a" class="image"><a href="%EB%AC%B8%EC%A7%80%EC%9B%85/calorie.png"><img style="width:709.984375px" src="%EB%AC%B8%EC%A7%80%EC%9B%85/calorie.png"/></a></figure></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8098-8da4-e539f94c41c2" class="bulleted-list"><li style="list-style-type:disc">파이썬 API - FastAPI 기반 : <strong>Ultralytics</strong> 와 <strong>EffecientNet 라이브러리</strong> 활용하여 AI 모델 구성</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80be-8e88-ce80a03b8b2a" class="bulleted-list"><li style="list-style-type:disc">스프링 서버, 파이썬 기반 FastAPI 와 데이터베이스 2개 모두 <strong>Docker Compose</strong> 로 단일 인스턴스 내 구동<div style="display:contents" dir="auto"><ul id="26a526db-cf50-802d-a11d-dc91c9a8e0d6" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Docker 컨테이너로 구동한 </mark><mark class="highlight-gray"><strong>Redis</strong></mark><mark class="highlight-gray"> 서버 한개 + Docker 컨테이너로 구동한 </mark><mark class="highlight-gray"><strong>MySQL</strong></mark><mark class="highlight-gray"> 서버 한개</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-806e-8130-e537fb2bec43" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><strong>User-defined Bridge Network</strong></mark><mark class="highlight-gray"> 구성으로 각각 Docker 내부 DNS 통해 통신</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-802d-ab55-cd42fe1c74c8" class="bulleted-list"><li style="list-style-type:disc">어떤것을 섭취했는지 AI 분석을 위한 식단 이미지 저장소로 <strong>S3</strong> 버킷 활용</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-800d-83f8-f61e1635782f" class="bulleted-list"><li style="list-style-type:disc">프론트엔드는 웹페이지가 아니라 <strong>React Native</strong> 통해 앱(어플리케이션)으로 개발 및 배포</li></ul></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-8094-834b-f986ddbc9009" class="block-color-teal_background"><strong>Technical Implementation 핵심 구현 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8036-829e-f7d6afe91137" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/CaloriePay-Record-247526dbcf50808b9964dcf7aa219a21?pvs=21">Record</a></strong><strong> : 객체의 불변성을 위해 DTO, VO에 Java16부터 지원하는 Record 사용</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8017-ac1e-ede2b8b8efa1" class="bulleted-list"><li style="list-style-type:disc"><strong>공통응답 : 사용자들에게 일관된 응답을 전하기 위하여 공통응답(ApiResponse) 설계 및 적용</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80ad-bd0d-c8d6ebe1131b" class="bulleted-list"><li style="list-style-type:disc"><strong>DDD 도입 : 각 서비스에 분산된 비즈니스 로직을 도메인으로 이전하여 중복 코드를 줄이고 응집도를 강화</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8056-be8e-ed9f9b39438e" class="bulleted-list"><li style="list-style-type:disc"><strong>퍼사드 패턴 적용 : 서비스 계층에 퍼사드 패턴을 적용하여 복잡도를 줄이고 하위 객체의 책임을 명확히 분리</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80ab-ab60-eca5c6f6b641" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">하위계층에 SRP을 적용하여 UserFinder, UserRecorder과 같이 특정 역할만 담당하도록 설계</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8059-b906-cd2ce48df25d" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">상위계층인 UserService 에서는 하위 객체들을 호출하는 역할만 담당하여 서비스 계층 복잡도를 낮춤</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80d0-854b-ed60046d1f1e" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/CaloriePay-248526dbcf508032a8d9f1a3d797c647?pvs=21">캐싱 기능</a></strong><strong> : 메인화면 및 랭킹 조회 기능에서 Redis에 자주 조회되는 데이터를 캐싱하여 조회 성능 개선</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8003-8810-d0c9b264d4dd" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">@Cacheable을 통해 데이터를 캐싱, 데이터 변경시 @CacheEvict를 사용해 캐시 무효화</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8070-96e6-e63914b9f948" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><a href="https://www.notion.so/CaloriePay-Redis-248526dbcf50807f84f9f0d175733fe4?pvs=21">랭킹 기능</a></mark><mark class="highlight-gray">에서는 Redis의 Sorted Set 자료구조를 사용하여 효율적으로 랭킹시스템을 관리</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8066-822e-ecaaa8f49150" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/CaloriePay-24d526dbcf5080a98e5bc99c43fe4bd6?pvs=21">정산 기능</a></strong><strong> :  기존 배치 처리의 트랜잭션 일관성 및 대용량 처리 한계를 Spring Batch를 통해 개선</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-801a-83bd-e37a6ebfd37a" class="block-color-gray bulleted-list"><li style="list-style-type:circle">청크 단위 처리 및 단계별 Job, Step 구성을 통해 안정성과 재실행성을 확보</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8059-bb8f-f26c40d81a8f" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">커서 기반의 리더인 JpaCursorItemReader를 사용하여 대량의 데이터를 메모리 효율적으로 처리</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80d9-adec-ee4f915d2f08" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/CaloriePay-248526dbcf5080c6aa77d1b1e7792693?pvs=21">이벤트 도입</a></strong><strong> : 이벤트를 도입해 서비스간 직접적인 호출을 줄이고, 시스템의 결합도를 낮추고 확장성 개선</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80a9-8c78-fbd17e35233b" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">ApplicationEventPublisher로 이벤트를 발행하고 핸들러에서 이를 수신함으로써 결합도를 낮춤</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-803d-b5fd-ccbc64da2199" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">트랜잭션 전파 속성을 사용해 이전 트랜잭션 완료 시점에 이벤트가 안정적으로 처리되도록 구현</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-805a-8aaf-fde8e2f57e7e" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-8005-a1b5-fc7f2a638b8f" class=""><strong>무인매장 관리 프로젝트 (3) </strong><mark class="highlight-gray"><strong> |  기여도 (30/100)</strong></mark></h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-80ff-9a3e-eb776d77621d" class="block-color-gray">2023.12 ~ 2024.02 (2<strong>개월</strong>) | AWS 크레딧 지원으로 현업에 가까운 아키텍쳐 경험 </p></div><div style="display:contents" dir="ltr"><figure id="29b526db-cf50-80e0-a0c0-c0c19d128173"><div class="source">https://github.com/aksenaksen/SSG-USMS-business-service</div></figure></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80d4-b80c-f63acac2ac16" class=""><mark class="highlight-gray">🛠️ Spring Boot / Java, MySQL, Redis, Docker, Git - Github</mark></blockquote></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80a3-84dc-c38870584724" class="block-color-gray_background"><strong>Features 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8010-9da0-ff7ed560b2ed" class="bulleted-list"><li style="list-style-type:disc"><strong>CCTV 실시간 / 리플레이 시청:</strong> 매장 내 CCTV를 통해 실시간, 리플레이 영상시청</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8019-ab64-c625772a1a48" class="bulleted-list"><li style="list-style-type:disc"><strong>CCTV 이상행동 감지:</strong> CCTV 이상행동(도난, 파손, 투기 등)을 AI로 감지해 실시간으로 점주에게 알림</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-809b-a0e9-e8144b4870f8" class="bulleted-list"><li style="list-style-type:disc"><strong>점주에게 CCTV 통계 안내:</strong> 지역별 이상 행동 통계 자료 추출 후 매일 지역 내 매장 점주들에게 사건 사고 알림</li></ul></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-8061-b422-fe808680777f" class="block-color-yellow_background"><strong>Architecture 시스템 구성</strong></blockquote></div><div style="display:contents" dir="ltr"><figure id="26a526db-cf50-80a2-868d-e53c68ada29f" class="image"><a href="%EB%AC%B8%EC%A7%80%EC%9B%85/image.png"><img style="width:709.982666015625px" src="%EB%AC%B8%EC%A7%80%EC%9B%85/image.png"/></a></figure></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8089-8d51-c82272a710ad" class="bulleted-list"><li style="list-style-type:disc"><strong>AWS VPC</strong> 내 <strong>Public / Private 서브넷</strong>으로 외부 노출부와 내부 서버 및 저장소 분리구성</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8047-87aa-d0babcd71cab" class="bulleted-list"><li style="list-style-type:disc">파이썬 API - 플라스크 기반 : 구글의 티처블 머신을 활용하여 <strong>AI 모델</strong> 구성</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-807e-9140-d37dd5de87b6" class="bulleted-list"><li style="list-style-type:disc">스프링 API 2개 멀티 구성 : <strong>트랜스코딩 서버 내 FFmpeg</strong> 기반으로 영상을 분석 후 비즈니스 서버에서 후처리</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80cb-a2c4-e94b30d38abe" class="bulleted-list"><li style="list-style-type:disc">미디어 서버 접근과 비즈니스 서버 접근을 위해 <strong>NGINX 기반의 Reverse Proxy</strong> 구성</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8029-882e-da4a2431ef1e" class="bulleted-list"><li style="list-style-type:disc">2개 저장 서버 구성 : <strong>Docker 컨테이너로 구동한 Redis 서버</strong> 한개 + <strong>AWS RDS 통한 MySQL 서버</strong> 한개</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80c6-b0b5-da9146e40df5" class="bulleted-list"><li style="list-style-type:disc">S3 버킷 2개 구성 : 원본 영상을 저장하기 위한 버킷 + AI 분석을 위해 전처리된 트랜스코드 영상을 위한 버킷</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-808a-8a97-e354099d2853" class="bulleted-list"><li style="list-style-type:disc">Private 서브넷 내 인스턴스에서 외부와의 아웃바운드 통신 위한 <strong>NAT GW</strong> + 인바운드 통신 위한 <strong>Bastion</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-801d-80fc-c07d975c4942" class="bulleted-list"><li style="list-style-type:disc">모든 Private / Public 인스턴스들은 <strong>인스턴스 레벨의 SG 구성</strong>과 <strong>서브넷 단위의 NACL 구성</strong>을 통해 외부통제</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-801f-9e28-e66d8544ffa3" class="bulleted-list"><li style="list-style-type:disc"><strong>GitHub</strong>와 <strong>GitHub Actions</strong>를 활용해 CI/CD 파이프라인을 구축 및 테스트, 빌드 자동화</li></ul></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-807a-826c-c5b2c5b5e596" class="block-color-teal_background"><strong>Technical Implementation 핵심 구현 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-806e-9027-e592a8bdcd07" class="bulleted-list"><li style="list-style-type:disc"><strong>RESTful : HTTP Method / URL 및 HTTP Status 409(Conflict), 401(Unauthorized) 세부 설계</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80f1-a623-dca9a33aba86" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/USMS-23c526dbcf5080709ce0e68bc7b76749?pvs=21">요청 검증</a></strong><strong> : 프론트엔드에서도 검증을 하지만 API 직접 호출이 될 수 있기에 서버에서 이중 검증</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80c6-bd4b-e8828e8f626c" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">@Valid / @Validated 에 @PhoneNumber 같은 커스텀 어노테이션을 개발하여 요청 검증 일괄처리</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80b2-ad20-e9f7d54b9e9b" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">HandlerMethodValidation / MethodArgumentNotValid / ConstraintViolationException 처리</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80f5-8101-db3d3c0eb001" class="bulleted-list"><li style="list-style-type:disc"><strong>로그인 기능 : ID / OAUTH / JWT 기반 로그인 구현 및 세션 기반 인증 구현했다가 후에 토큰 기반 인증 변경</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80a5-be96-e516cf55cf92" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">@Configuration + @Bean 기반으로 SecurityFilterChain 내 직접 구현한 커스텀 필터들 추가</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-801c-9310-cec266590b73" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Filter &gt; Manager &gt; Prodiver 인증 후 성공적으로 SecurityContext 내 AutenticationToken 적재</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80be-bc41-fb7b5d7828d0" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/Usms-23f526dbcf5080eb8f72f995c66982cf?pvs=21">본인 인증기능</a></strong><strong> : SMS / EMAIL 통한 회원가입이나 비밀번호 변경 시 본인 인증</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80ea-84a3-fc3d167b1c77" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">UUID 통한 인증 여부판단 기준값 + 인증 여부판단 기준값 저장을 위한 중앙 캐시 저장소로 Redis 선택</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8019-8103-c695743ec5cb" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">LB 에 연결된 다수 서버가 단일 접근할 수 있도록 로컬 저장소 Memcached 가 아닌 Redis 선택</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8052-bdaf-e0bd875a4672" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/Usms-23f526dbcf5080ceba1af9c85b295298?pvs=21">알림 발송 서비스</a></strong><strong> : 유저가 알림을 받을 방식을 선택할 수 있도록 하여 다양한 형태의 알림 발송방식을 지원</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80f7-8a14-f3bcc2ee85e6" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><mark class="highlight-default_background">NotificationService 인터페이스를 활용하여 전략패턴을 통해 SMS / KAKAO / EMAIL 개별 구현</mark></mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80b7-b415-c772c9a08ad8" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">디바이스 토큰값으로 특정 스마트폰의 앱에만 전송되도록 Firebase 통해 APP PUSH 알림 구현</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80be-9007-ebc857180ef9" class="bulleted-list"><li style="list-style-type:disc"><strong><a href="https://www.notion.so/USMS-239526dbcf5080c3ac3acd78d417b99d?pvs=21">에러 중앙처리</a></strong><strong> : 체계적이고 일관성 있는 예외 처리를 통해 서버 내 발생하면 예외 추적이 용이하도록 설계</strong><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80c1-ac88-cd48e6dc9465" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">개별 Exception 클래스 정의와 ExceptionType 열거형 정의를 통해 수십개 이슈 상황에 대한 대처</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80f0-9662-e80d960fa613" class="block-color-gray bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">ResponseEntity 통한 HTTP 상태코드 설정 및 ErrorResponseDto 통한 에러 상황 상세히 제공</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h2 id="294526db-cf50-80f4-990b-dc9669bd40f5" class="">📂 Projects 개발 프로젝트 (개인)</h2></div><div style="display:contents" dir="auto"><hr id="294526db-cf50-80bd-ab2a-e76a282f9c76"/></div><div style="display:contents" dir="auto"><h3 id="294526db-cf50-80a3-8e49-cc181c31e244" class=""><strong>SNS 피드형 웹 서비스 개인프로젝트</strong><mark class="highlight-gray"><strong> </strong></mark></h3></div><div style="display:contents" dir="auto"><p id="294526db-cf50-80df-87ad-e4ac4cd7b9c9" class="block-color-gray">2025.08 ~ 2025.09 (1<strong>개월</strong>) | </p></div><div style="display:contents" dir="auto"><blockquote id="294526db-cf50-80f7-b1b8-cfa7c2578bac" class=""><mark class="highlight-gray">🛠️ Spring Boot / Java,  MySQL, Redis, Docker, JPA, QueryDSL</mark></blockquote></div><div style="display:contents" dir="auto"><blockquote id="294526db-cf50-80e0-902b-d9f4dd91077b" class="block-color-gray_background"><strong>Features 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-802d-9a20-f2f19701bad2" class="bulleted-list"><li style="list-style-type:disc"><strong>피드 기능:</strong> 사용자가 올린 게시글과 팔로우한 사용자의 게시글을 최신순으로 보여주는 피드를 제공</li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-80b8-86e8-cd74a7bee458" class="bulleted-list"><li style="list-style-type:disc"><strong>팔로우 기능:</strong> 팔로잉한 사용자의 게시글을 기반으로 개인화된 피드를 제공</li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-80a3-a0b6-d49a8939be12" class="bulleted-list"><li style="list-style-type:disc"><strong>관리자 페이지:</strong> 사용자 및 게시글을 관리할 수 있는 페이지를 제공</li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-807f-b77e-d9f742895611" class="bulleted-list"><li style="list-style-type:disc"><strong>댓글 기능:</strong> 게시글에 댓글을 작성하고 다른 사용자와 소통</li></ul></div><div style="display:contents" dir="auto"><blockquote id="294526db-cf50-8031-b0b5-e84c335f2a04" class="block-color-teal_background"><strong>Technical Implementation 핵심 구현 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-80c3-988c-db01d6d4470f" class="bulleted-list"><li style="list-style-type:disc"><strong>QueryDSL:</strong> 복잡한 쿼리를 <strong>Type Safe</strong>하게<strong> 작성</strong>하고, <strong>동적 조건 검색 및 페이징 처리의 가독성 향상</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-801c-8476-c7a45d4ec4e2" class="bulleted-list"><li style="list-style-type:disc"><strong>N+1 문제:</strong>  <strong>fetch join</strong>과 <strong>@EntityGraph</strong>를 사용하여 선언적으로 N+1 문제를 개선</li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-8006-b9ec-c32bff3083bb" class="bulleted-list"><li style="list-style-type:disc"><strong>무한 스크롤</strong>: <strong>lastId</strong> 값을 기준으로 <strong>KeySet 기반 무한 스크롤 페이징</strong>을 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-80f8-ad0b-e884cccbd5dc" class="bulleted-list"><li style="list-style-type:disc"><strong>읽기 전용 모델:</strong> 메인 화면 조회 성능을 높이기 위해 별도의 읽기 모델 사용<div style="display:contents" dir="auto"><ul id="294526db-cf50-805c-88c4-c3faf24be8dd" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><strong>여러 도메인을 사용하는 </strong></mark><mark class="highlight-gray">FeedQueryModel</mark><mark class="highlight-gray"><strong> </strong></mark><mark class="highlight-gray">및 각각의 클라이언트를 별도로 구현 </mark></li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-80cb-9df4-d92833e37f89" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Redis를 활용하여 읽기 전용 데이터를 캐싱</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><p id="294526db-cf50-80b7-b8e2-d0926af9b1fe" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="294526db-cf50-8053-8ef3-cef413c0d57d" class="">실시간 주식 거래 프로젝트</h3></div><div style="display:contents" dir="auto"><p id="294526db-cf50-80d9-a4bf-fa0014a538fa" class="block-color-gray">2025.10 (2주) | Spring WebFlux를 학습하고 이를 활용한 토이프로젝트 </p></div><div style="display:contents" dir="auto"><blockquote id="294526db-cf50-800e-8860-c5ce09301879" class=""><mark class="highlight-gray">🛠️ Spring Boot / Java, WebFlux, R2DBC, H2</mark></blockquote></div><div style="display:contents" dir="auto"><blockquote id="294526db-cf50-8040-9dfb-fa5e02e31cf4" class="block-color-gray_background"><strong>Features 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-8061-b068-f02dc39c31bc" class="bulleted-list"><li style="list-style-type:disc"><strong>실시간 주가 확인:</strong> 외부 API로부터 제공되는 <strong>실시간 주가 데이터를 스트리밍 방식으로 조회</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-802b-b52e-c930cc6efeaf" class="bulleted-list"><li style="list-style-type:disc"><strong>트레이딩 기능:</strong> 실시간 주가를 기반으로 <strong>주식 매수/매도 거래 기능</strong>을 구현, 사용자 요청에 따라 즉시 처리</li></ul></div><div style="display:contents" dir="auto"><blockquote id="294526db-cf50-8018-a499-c228f1e514fa" class="block-color-teal_background"><strong>Technical Implementation 핵심 구현 기능</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-8058-ab0c-d016c2f12a29" class="bulleted-list"><li style="list-style-type:disc"><strong>실시간 주가 스트리밍:</strong> <strong>Flux</strong>를 활용하여 외부 API로부터 실시간 주가 데이터를<strong> 스트리밍</strong>으로 수신</li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-80bf-bbf4-d1fb4b343fd2" class="bulleted-list"><li style="list-style-type:disc"><strong>WebClient 활용: WebClient</strong>를 통해 외부 주가 API 호출을 <strong>비동기적으로 수행</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-8048-9a81-f75eb605ff38" class="bulleted-list"><li style="list-style-type:disc"><strong>거래 처리:</strong> 실시간 주가 데이터를 기반으로 <strong>사용자 매수/매도 요청을 즉시 처리</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="294526db-cf50-8052-8781-d8e2ba63fd80" class="bulleted-list"><li style="list-style-type:disc"><strong>WebFlux 기반 비동기 처리:</strong> <strong>WebFlux</strong>와 <strong>R2DBC</strong>를 활용하여 비동기·논블로킹 방식으로 주가 조회</li></ul></div><div style="display:contents" dir="auto"><p id="294526db-cf50-8029-84ed-daba1b695ef8" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="26a526db-cf50-803c-9558-c5019a4ffaef" class="">🎓 Certifications</h2></div><div style="display:contents" dir="auto"><hr id="26a526db-cf50-8092-8f29-c57c0921718b"/></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-8050-b472-eff03894e536" class=""><strong>AWS Certified Solutions Architect - Associate</strong></h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-8025-ac10-c34d816a5dba" class=""><mark class="highlight-gray"><strong>2025-09-10 | Amazon Web Services (AWS)</strong></mark></p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80f2-bcf1-d827fa93cc85" class="block-color-gray_background">클라우드 아키텍처 설계 및 최적화 역량을 검증 및 비용 최적화 방법을 학습하기 위해 습득</blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8011-87f8-f58bc6da6ae4" class="bulleted-list"><li style="list-style-type:disc">AWS 리소스 비용 최적화, 서버리스 설계, 가용성 및 보안 강화 방법을 학습</li></ul></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-8014-ad2c-f3f4a1a701ce" class="">PCCP Lv3 (Java)</h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-808b-b44e-e69a4a2bc185" class=""><mark class="highlight-gray"><strong>2025-06-14 | (주)그렙</strong></mark></p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80ec-a0f4-f485ef8e777b" class="block-color-gray_background">다양한 알고리즘을 통한 코딩 역량 강화 및 검증을 위해 습득 &amp; 본 능력을 기반으로 다양한 코테 시험 통과</blockquote></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-805e-ab1c-c1fab3c7e0f8" class="block-color-default bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">BFS / DFS 통한 그래프 알고리즘과 다이나믹 프로그래밍을 통한 재귀 알고리즘 문제 해결능력</mark></li></ul></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-80ed-9965-c7be5702124b" class="">SQLD</h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-8075-9d42-d6d10b89c30e" class=""><mark class="highlight-gray"><strong>2024-09-20 | 한국데이터진흥원</strong></mark></p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-803c-92e2-f1438f8723fb" class="block-color-gray_background">테이블 설계와 다양한 쿼리 최적화 역량을 기르기 위해 습득</blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-809e-b9e7-ec248261d176" class="bulleted-list"><li style="list-style-type:disc">이를 기반으로 AI식단 관리 어플리케이션 프로젝트에서 처음 랭킹 기능을 구현할때 RANK함수를 통해 최적화</li></ul></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-803e-9fa4-f3867470193c" class=""><strong>정보처리기사</strong></h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-8087-b855-ce501c4829a4" class=""><mark class="highlight-gray"><strong>2024-09-10 | 한국산업인력공단</strong></mark></p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-8039-8c77-f14d7efce33f" class="block-color-gray_background">학부 과정에서 배운 CS지식을 확립하고, 실무에서 이를 적용할 수 있도록 하기위해 습득</blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80f1-a8f7-f85a3311b2e6" class="bulleted-list"><li style="list-style-type:disc">이를 기반으로 무인매장 관리 프로젝트 당시, AWS VPC를 구성할 때 주도적으로 설계</li></ul></div><div style="display:contents" dir="auto"><h2 id="26a526db-cf50-8045-a8c0-fd952f31b518" class="">📘 Education 교육활동</h2></div><div style="display:contents" dir="auto"><hr id="26a526db-cf50-80bc-9c8a-f37cf30b6118"/></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-804e-8848-f55b9212d752" class="">디지털 노마드 외주 연계 교육 라이징 캠프</h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-80b9-9e61-e29f1f8ea448" class="">2025.07 ~ 2025.10</p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80be-9b30-f9c678cff797" class="block-color-gray_background">웹, 네트워크 , 백엔드 개발에 있어서 심화된 내용을 학습 및 외주 프로젝트를 경험하기위해 참여</blockquote></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-804a-ace8-da3b33811580" class=""><strong>웹 개론 및 CI/CD 파이프라인 - Docker, AWS, Github Actions</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-802b-bfdf-ee9c7c454705" class="bulleted-list"><li style="list-style-type:disc"><a href="http://naver.com">naver.com</a> 에 요청시에 발생하는 HTTP 요청-응답 사이클 학습</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80d9-af2a-cbaf7b65afca" class="bulleted-list"><li style="list-style-type:disc">Docker의 개념 및 사용 이유, CI/CD 절차와 Github Actions를 활용한 파이프라인 구축</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8008-bd5f-c281f5bc9375" class="bulleted-list"><li style="list-style-type:disc">라우터, 방화벽, 인터넷 게이트웨이(IGW) 등을 활용한 네트워크 구성과 트래픽 흐름 학습</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-805a-a566-c9768957ed60" class="bulleted-list"><li style="list-style-type:disc">VPC 구성과 서브넷, 라우팅, 보안 그룹 설계를 통해 클라우드 네트워크 구조와 접근 제어를 실습</li></ul></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-8024-a30b-e60c2cff234b" class=""><strong>데이터베이스 심화 과정</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-800d-914f-e0dd81b92197" class="bulleted-list"><li style="list-style-type:disc">비관적 락(Pessimistic Lock)과 낙관적 락(Optimistic Lock) 사용 방법과 동시성 제어 이해</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80a6-b22d-f689587a2afd" class="bulleted-list"><li style="list-style-type:disc">Clustered Index와 Non-Clustered Index 구조 이해 및 Covering Index 활용 SQL 작성 실습</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-800c-a0ae-d2e22cf8890d" class="bulleted-list"><li style="list-style-type:disc">Cardinality 와 Selectivity를 고려하여 효율적인 인덱스 컬럼 선택 전략 학습</li></ul></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-8045-84fc-eee27c0c5c10" class=""><strong>백엔드 심화 과정</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-803d-851b-d4212c86b638" class="bulleted-list"><li style="list-style-type:disc">다양한 디자인 패턴, SOLID 원칙을 지키는 코드 작성법 학습</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8042-90dd-fe3868c21500" class="bulleted-list"><li style="list-style-type:disc">Spring Data JPA에서 엔티티 간 연관관계 매핑과 데이터베이스 스키마 설계 차이를 이해 및 실습</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-805a-a2b7-f6244c5400c9" class="bulleted-list"><li style="list-style-type:disc">ProblemDetails를 활용한 일관된 에러 응답 처리 실습</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8015-a111-e7e2be179405" class="bulleted-list"><li style="list-style-type:disc">계층형, 헥사고날 아키텍처 구조의 이해 및 실습</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8003-a1a8-febd5966192a" class="bulleted-list"><li style="list-style-type:disc">OAuth 2.0 및 OpenID Connect(OIDC) 기반 인증·인가를 이해 및 실습</li></ul></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-8057-bc05-ff2e01a155d4" class=""><strong>부경대학교 컴퓨터공학과</strong></h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-802b-a750-d934834d5b65" class="">2019.03 ~ 2025.02 <strong>(졸업)</strong></p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80bc-9341-ccd15cf5073c" class="block-color-gray_background">객체지향 프로그래밍, 알고리즘, 데이터 구조 등 핵심 CS 과목에서 깊이 있는 학습을 통해 뛰어난 성적을 거두었으며, 이를 바탕으로 복잡한 문제 해결 능력을 길렀습니다.</blockquote></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-80ae-9843-d1ccd39893b5" class="bulleted-list"><li style="list-style-type:disc">C 언어로 링크드 리스트, 스택, 큐, 트리 등 자료구조를 직접 구현하며 메모리 관리와 알고리즘 이해도를 심화</li></ul></div><div style="display:contents" dir="auto"><ul id="26a526db-cf50-8093-a9ee-ca4516381554" class="bulleted-list"><li style="list-style-type:disc">데이터베이스 설계 및 SQL 활용 능력을 갖추고, 효율적인 데이터 관리와 쿼리 최적화 역량을 확보</li></ul></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-80b9-a11c-e02192778bcf" class="">부산 디지털아카테미 해커톤</h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-807a-ab94-f80de852eea1" class="">2024.08 ~ 2024.11 (<strong>3개월</strong>) </p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-8070-9bf5-c5162fd7044c" class="block-color-gray_background">사용자 경험을 반영한 서비스 개발 경험을 쌓고자 동기들과 지원<br/>벡스코에서 프로젝트를 전시하며 실제 사용자들에게 서비스를 제공할 수 있었음<br/>최종적으로 혁신상(3위)을 수상</blockquote></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-8078-b8bd-ebb1b39fefa2" class=""><strong>AI 활용한 식단관리 어플리케이션 팀프로젝트 진행</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-801c-b8c2-f52968e5887e" class="bulleted-list"><li style="list-style-type:disc">실제 사용자들의 경험을 고려하여 서비스를 최적화 하는 역량 강화</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80af-aa6e-fa1941879790" class="bulleted-list"><li style="list-style-type:disc">FastAPI 기반 YOLO 객체 탐지 서버와 REST API 연동 경험</li></ul></div><div style="display:contents" dir="auto"><h3 id="26a526db-cf50-8043-af38-f86b9f268751" class="">신세계 아이앤씨 <mark class="highlight-default"><strong>AI를 활용한 리테일 서비스 개발 부트캠프</strong></mark></h3></div><div style="display:contents" dir="auto"><p id="26a526db-cf50-8028-8188-e69f294d2938" class="">2023.08 ~ 2024.02 (<strong>6개월</strong>) | 720시간</p></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80a2-82d8-f96e8603ec45" class="block-color-gray_background">웹 개발에 대한 기초를 쌓고 실제 프로젝트 경험을 쌓고자 지원<br/>무인매장 관리 프로젝트를 통해 Spring Boot기반 프로젝트를 구현, 팀원들과 요구사항 분석 부터 배포까지 전 단계를 거치며 협업 및 문제해결 능력 강화</blockquote></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-80a7-b97f-db4b1ba9325b" class=""><strong>웹 기초 과정 - HTML, CSS, JavaScript</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-8064-8cad-ed9fef6aa807" class="bulleted-list"><li style="list-style-type:disc">전반적인 웹 지식 학습 및 기초 언어로 토이 프로젝트 진행</li></ul></div><div style="display:contents" dir="auto"><blockquote id="26a526db-cf50-802d-af6b-dcd5b269cea2" class=""><strong>백엔드 과정</strong></blockquote></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-80a6-9bbf-dd658cc0c8b4" class="bulleted-list"><li style="list-style-type:disc">Java 객체 지향 프로그래밍 문법 및 JVM 의 구성 및 특징 학습</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-8066-939d-f2b5f73d655e" class="bulleted-list"><li style="list-style-type:disc">Spring의 기초와 핵심인 Ioc에 대해 학습</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-802a-9dd9-ed469fec8f55" class="bulleted-list"><li style="list-style-type:disc">JDBC를 통한 DB 연동방법 학습</li></ul></div><div style="display:contents" dir="auto"><ul id="26c526db-cf50-801c-a6ca-e12704d16a31" class="bulleted-list"><li style="list-style-type:disc">Spring Boot 및 DB매핑 기술인 MyBatis 학습</li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
