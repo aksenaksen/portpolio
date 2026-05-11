@@ -45,9 +45,9 @@ function initNavigation() {
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       // Remove active state from all links
-      navLinks.forEach(l => l.classList.remove('text-emerald-400'));
+      navLinks.forEach(l => l.classList.remove('text-cyan-400'));
       // Add active state to clicked link
-      link.classList.add('text-emerald-400');
+      link.classList.add('text-cyan-400');
     });
   });
 
@@ -64,9 +64,9 @@ function initNavigation() {
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('text-emerald-400');
+      link.classList.remove('text-cyan-400');
       if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('text-emerald-400');
+        link.classList.add('text-cyan-400');
       }
     });
   }, 100));
@@ -237,8 +237,8 @@ function getCurrentYear() {
 
 // Log visitor info (optional analytics)
 function logVisitorInfo() {
-  console.log('%c Welcome to 문지웅 Portfolio! ', 'background: #10b981; color: white; font-size: 16px; padding: 8px;');
-  console.log('%c If you are interested in working together, reach out: ans109905@naver.com ', 'font-size: 14px; color: #10b981;');
+  console.log('%c Welcome to 문지웅 Portfolio! ', 'background: #06b6d4; color: white; font-size: 16px; padding: 8px;');
+  console.log('%c If you are interested in working together, reach out: ans109905@naver.com ', 'font-size: 14px; color: #06b6d4;');
 }
 
 logVisitorInfo();

@@ -119,7 +119,7 @@ function initCardHoverEffect() {
   cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
       card.style.transform = 'translateY(-8px)';
-      card.style.boxShadow = '0 20px 40px rgba(16, 185, 129, 0.15)';
+      card.style.boxShadow = '0 20px 40px rgba(6, 182, 212, 0.15)';
     });
 
     card.addEventListener('mouseleave', () => {
@@ -153,13 +153,13 @@ function initGradientAnimation() {
 
   gradientElements.forEach(element => {
     const angle = Math.random() * 360;
-    element.style.backgroundImage = `linear-gradient(${angle}deg, rgba(16, 185, 129, 0.1), rgba(99, 102, 241, 0.1))`;
+    element.style.backgroundImage = `linear-gradient(${angle}deg, rgba(6, 182, 212, 0.1), rgba(99, 102, 241, 0.1))`;
 
     // Animate gradient
     let currentAngle = angle;
     setInterval(() => {
       currentAngle += 0.5;
-      element.style.backgroundImage = `linear-gradient(${currentAngle}deg, rgba(16, 185, 129, 0.1), rgba(99, 102, 241, 0.1))`;
+      element.style.backgroundImage = `linear-gradient(${currentAngle}deg, rgba(6, 182, 212, 0.1), rgba(99, 102, 241, 0.1))`;
     }, 100);
   });
 }
@@ -227,14 +227,14 @@ function initTabAnimation() {
       const tabName = button.getAttribute('data-tab-button');
 
       // Deactivate all tabs
-      tabButtons.forEach(btn => btn.classList.remove('text-emerald-400'));
+      tabButtons.forEach(btn => btn.classList.remove('text-cyan-400'));
       tabContents.forEach(content => {
         content.classList.remove('opacity-100');
         content.classList.add('opacity-0', 'pointer-events-none');
       });
 
       // Activate selected tab
-      button.classList.add('text-emerald-400');
+      button.classList.add('text-cyan-400');
       const selectedContent = document.querySelector(`[data-tab-content="${tabName}"]`);
       if (selectedContent) {
         selectedContent.classList.remove('opacity-0', 'pointer-events-none');
